@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="static/JavaScript.js" defer></script>
+    <title>Doctor Finder - Search</title>
+    <link rel="stylesheet" href="static/css1.css">
+</head>
+<body class="A">
+    
+    <div class="search-container">
+        <div class="search-item">
+            <img src="images/3.png" width="300" height="500" alt="">
+        </div>
+        <div class="search">
+            <header>
+                <nav class="nav" id="nav-Home">
+                    <ul class="nav-list">
+                        <li class="list-item">
+                            <a href="HomePage.html" class="nav-background">Log Out</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 id="what-are-you-looking-for">What are you looking for?</h1><br>
+            </header>
+            
+            <form class="form-sign-in-up" action="">
+                <table class="A">
+                    <tr> <td>
+                    <lable class="sign_up_titles" for="city">Service Type:</lable>
+                    </td> <td>
+                    <select required id="service-types" name="service-types" class="form-control">
+                        <option value="">-- Select Service Type --</option>
+                        <option value="Dentist">Dentist</option>
+                        <option value="Otolaryngology">Otolaryngology</option>
+                        <option value="Family">Family</option>
+                        <option value="Orthopedic">Orthopedic</option>
+                        <option value="Eyes">Eyes</option>
+                        <option value="Gynecologist">Gynecologist</option>
+                        <option value="Neurologist">Neurologist</option>
+                        <option value="Plastics">Plastics</option>
+                    </select>
+                    </td> </tr> <tr> <td>
+                    <lable class="sign_up_titles" for="country">Country:</lable>
+                    </td> <td>
+                     <select required id="country" name="country" class="form-control" onChange="dynamic_city()">
+                        <option value="">-- Select Country --</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Florida">Florida</option>
+                    </select>
+                    </td> </tr> <tr> <td>
+                    <lable class="sign_up_titles" for="">City:</lable>
+                    </td> <td>
+                    <select required id="city">
+                        <option value="">-- Select City -- </option>
+                    </select>
+                    </td> </tr> <tr> <td id="radius-textbox">
+                    <input type="checkbox" name="checkbox-id" id="checkbox-id" value="" onclick="enableCreateUser(); GetLocation()">
+                    <p id="current-location"></p>
+                    </td><td>
+                    <lable class="sign_up_titles" for="">Use my current location</lable>
+                    <br></td></tr><tr> <td>
+                    <lable class="sign_up_titles" for="">Radius (KM):</lable>
+                    </td><td>
+                    <input type="number" name="radius-input" required id="radius-input" value="" min="0" max="40000"><br> <!--The circumference of the earth is 40,000 KM-->
+                    </td> </tr><tr> <td>
+                    </td> <td class="button">
+                    <input type="submit" name="submit" class="submit" value="Search">
+                    </td> </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    
+    <footer>Tal Cohen</footer>
+
+</body>
+</html>
