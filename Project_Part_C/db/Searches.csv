@@ -1,0 +1,6 @@
+userEmail,serviceType,country,city,latitude,longtitide,radius,year,month,day,time
+tal@gmail.com,Dentist,Argentina,Buenos Aires,-34.920345,-57.969559,100,2019,11,11,13:10:00
+amit@gmail.com,Family,Florida,Miami,25.793449,-80.191788,200,2020,10,25,10:10:00
+roni@gmail.com,Orthopedic,Israel,Tel Aviv,32.166313,34.843311,100,2021,12,27,04:40:00
+anat@gmail.com,Eyes,Florida,Orlando,28.5383355,-81.3792365,150,2021,10,19,18:10:00
+tal@gmail.com,Gynecologist,Israel,Haifa,32.794044,34.989571,120,2020,11,28,19:13:02

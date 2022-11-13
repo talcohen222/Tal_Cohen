@@ -1,0 +1,41 @@
+doctype html
+html
+    head
+        script(src='../static/JavaScript.js' defer='')
+        title Doctor Finder - Founded
+        link(rel='stylesheet' href='../static/style.css')
+    body
+        .Founded-container
+            #founded-item
+                img(src='../static/4.png' width='130' height='130' alt='')
+            div
+                header
+                    nav#nav-Home.nav
+                        ul.nav-list
+                            li.list-item(style='display:inline;')
+                                a.nav-background(href='/HomePage') Log Out
+                h1#found-header
+                    | These are the doctors 
+                    br
+                    |  we found for you...
+                hr.line-signup-page
+            #doctor1.doctors
+                .founded-doctors
+                    each n in pple
+                        .founded
+                            //br
+                            img.doctors-pic(src=n.picture width='100' height='100' alt='')
+                            br
+                            b.docs #{n.fullName}
+                            p Address: #{n.address}
+                            p Email Address: #{n.email}
+                            p Tel: #{n.phoneNumber}
+                            p Languages Spoken: #{n.languagesSpoken}
+                            p Medical Specialty: #{n.medicalSpeciality}
+                            br
+                            p Office Hours:
+                            p #{n.officeHours1}
+                            p #{n.officeHours2}
+                            p #{n.officeHours3}
+                            p #{n.officeHours4}
+                            

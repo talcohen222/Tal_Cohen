@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html id="SignUp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="static/JavaScript.js" defer></script>
+    <title>Doctor Finder - Sign Up</title>
+    <link rel="stylesheet" href="static/css1.css">
+</head>
+<body>
+    
+    <div class="signup-container">
+        <header>
+            <nav class="nav" id="nav-Home">
+                <ul class="nav-list">
+                    <li style="display:inline;" class="list-item">
+                        <a href="SignUp.html" class="nav-background">Sign Up</a>
+                    </li>
+                    <li style="display:inline;" class="list-item">
+                        <a href="AboutUs.html" class="nav-background">About Us</a>
+                    </li>
+                    <li style="display:inline;" class="list-item">
+                        <a href="HomePage.html" class="nav-background">Home</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1 id="sign_up">Sign Up</h1><br>
+        </header>
+        <hr class="line-signup-page">
+        <form class="form-sign-in-up" action="/newCustomer" method="POST">
+            <table>
+                <tr> <td>
+                <lable class="sign_up_titles" for="">User Name:</lable><br>
+                </td> <td>
+                <input type="text" name="UserName" required id="UserName" value=""><br>
+                </td> </tr> <tr> <td>
+                <lable class="sign_up_titles" for="">Email:</lable><br>
+                </td> <td>
+                <input type="email" name="email" required id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="user@wabsite.com/co.il"><br>
+                </td> </tr> <tr> <td>
+                <lable class="sign_up_titles" for="">Password:</lable><br>
+                </td> <td>
+                <input type="password" name="password" required id="password" value="" required minlength="8" onInput="check()"><br>
+                </td> </tr> <tr> <td>
+                <lable class="sign_up_titles" for="">Check Password:</lable><br>
+                </td> <td>
+                <input type="password" name="check-Password" required id="check-Password" value="" required minlength="8"><br>
+                </td> </tr> <tr> <td>
+                </td> <td class="button"> 
+                <input type="submit" name="submit" class="submit" value="Submit" onclick="compare_password_and_check_password();">
+                </td> </tr>
+            </table>
+        </form>
+        <div id="check-password">
+            <div id="set" >
+                <div id="count">Length : 0</div>
+                <i id="see" onclick="see()" class="far fa-eye"></i>
+            </div>
+            <div id="check0">
+                <i class="far fa-check-circle"></i><span>Length more than 8.</span>
+           </div>
+           <div id="check1">
+                <i class="far fa-check-circle"></i><span>Length less than 10.</span>
+           </div>
+           <div id="check2">
+                <i class="far fa-check-circle"></i><span>Contains numerical character.</span>
+           </div>
+           <div id="check3">
+                <i class="far fa-check-circle"></i><span>Contains special character.</span>
+           </div>
+           <div id="check4">
+                <i class="far fa-check-circle"></i><span>Shouldn't contain spaces.</span>
+           </div>
+        </div>
+    </div>
+
+    <footer>Tal Cohen</footer>
+    
+</body>
+</html>

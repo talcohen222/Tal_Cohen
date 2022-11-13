@@ -1,0 +1,554 @@
+*{
+    padding: 5px;
+    margin: 5px;
+    background-color: var(--BackgroundColor);
+}
+
+:root{
+    --BackgroundColor: rgb(211, 215, 225);
+    --MyBlack: #000000;
+    --MyGray1: rgb(70, 70, 70);
+    --MyGray2: rgb(82, 82, 82);
+    --MyGray3: rgb(100, 90, 90); 
+    --MyGray4: gray;
+    --MyPink1: rgb(199, 0, 73);
+    --MyPink2: rgb(227, 192, 211);
+    --MyBlue: rgb(0, 33, 141); 
+    --MyGrayBlue: rgb(91, 102, 138);
+    --MyWhite: aliceblue;
+    --MyRed: red;
+}
+
+#line-home-page{
+    background-color: var(--MyGray1);
+    padding: 0px;
+    --mycolor: rgb(227, 192, 211);
+}
+
+.submit{
+    color: var(--MyPink1);
+    height: 30px;
+    border-color: var(--MyPink1);
+}
+
+.search{
+    padding: 0px 90px 0px 0px;
+    margin: 0px;
+}
+
+.search-container{
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-areas: 
+    'search-item search search';
+    text-align: center;
+}
+
+.search-item{
+    padding: 0px;
+    margin: 0px;
+}
+
+.doctorFinder{
+    color: var(--MyGray1);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 30px 5px 5px 5px;
+}
+
+#title-doctorFinder{
+    font-size: 40px;
+}
+
+#subtitle-doctorFinder{
+    font-size: 20px;
+}
+
+#sign_up{
+    font-size: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--MyPink1);
+}
+
+.line-signup-page{
+    background-color: var(--MyPink1);
+    margin-top: 0px;
+    padding: 0px;
+}
+
+#what-are-you-looking-for{
+    margin-top: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 45px;
+    color: var(--MyBlue);
+}
+
+.A{
+    padding: 0px;
+    margin: 0px;
+}
+
+.sign_up_titles{
+    color: var(--MyGray2);
+}
+
+.signup-container
+{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.form-sign-in-up{
+    display: inline-block;
+    text-align: left;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--MyPink1);
+}
+
+input[name]{
+    border-color: var(--MyPink1);
+}
+
+.button{
+    text-align: center;
+}
+
+#radius-textbox{
+    text-align: right;
+}
+
+
+/*Home page Grid*/
+.container1{
+    display: grid;
+    grid-template-areas: 
+    'plus_item doctorFinder heart_item'
+    'medical1 signup-container medical2';
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.plus_item{
+    grid-area: plus_item;
+}
+
+.doctorFinder{
+    grid-area: doctorFinder
+}
+
+.heart_item{
+    grid-area: heart_item;
+    animation: zoom-in-zoom-out 2s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {       /*animation for the heart item - make it beating*/
+    0% {transform: scale(1, 1);}
+    50% {transform: scale(1.15, 1.15);}
+    100% {transform: scale(1, 1);}
+}
+
+.medical1{
+    grid-area: medical1
+}
+
+.signup-container{
+    grid-area: signup-container
+}
+
+.medical2{
+    grid-area: medical2
+}
+/*Home page Grid - close*/
+
+
+/*Founded page Grid*/
+.Founded-container{
+    display: grid;
+    grid-template-areas: 
+    'founded-item found-header'
+    'doctor1 doctor1'
+}
+
+#doctor1{
+    grid-area: doctor1;
+    overflow: auto;
+}
+
+#doctor2{
+    grid-area: doctor2
+}
+
+#founded-item{
+    grid-area: founded-item;
+    text-align: right;
+}
+
+#found-header{
+    grid-area: found-header;
+    text-align: left;
+    font-size: 37px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--MyPink1);
+}
+/*Founded page Grid - close*/
+
+
+.doctors{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.doc-tables{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.doctors-pic{
+    border: 1px solid var(--MyBlack);
+}
+
+.docs{
+    font-size: 25px;
+    color: var(--MyBlue);
+}
+
+
+/*Rate Stars*/
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;    
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:var(--MyGrayBlue);
+}
+.rate:not(:checked) > label:before {
+    content: '★  .';
+}
+.rate > input:checked ~ label {
+    color: var(--MyBlue);
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: var(--MyBlue); 
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: var(--MyBlue);
+}
+/*Rate Stars*/
+
+
+/*Rate page Grid*/
+#rate-page-container{
+    display: grid;
+    grid-template-areas: 
+    'rate-container1'
+    'rate-container2'
+    'rate-container3'
+    'rate-container4'
+}
+
+#rate-container1{
+    grid-area: rate-container1;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#rate-container2{
+    grid-area: rate-container2;
+    text-align: center;
+    margin-right:auto;
+    margin-left: auto;
+}
+
+#rate-container3{
+    grid-area: rate-container3;
+    text-align: center;
+}
+
+#rate-container4{
+    grid-area: rate-container4;
+    text-align: center;
+}
+/*Rate page Grid - close*/
+
+
+/*nav*/
+.nav {
+    padding: 0px;
+    margin: 0px;
+    grid-area: Nav;
+    display: right; 
+    font-weight: bold;   
+    justify-content: space-around; 
+    width: 100%;
+	font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-list {
+    list-style-type: none;
+    text-align: right;
+}
+
+.nav a{
+    color: var(--MyBlue);
+    font-size: larger;
+    text-decoration: none;
+}
+
+ .nav a:hover{
+    color: var(--MyGrayBlue);
+}
+
+.nav-background{
+    background-color: var(--MyPink2);
+}
+/*nav - close*/
+
+
+.Active{
+    background-color: var(--MyWhite);
+}
+
+/*About Us*/
+.Header-about {
+	color:var(--MyBlue); 
+    font-size: 40px;
+	text-align:center;
+	padding-top: 2%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.Text-about{
+	color:var(--MyGray3);
+    font-size: 21px;
+	text-align:center; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+#about-line{
+    background-color: var(--MyBlue);
+    padding: 0px;
+}
+/*About Us - close*/
+
+
+/*check password*/
+#set
+{
+    display:block ;
+    position:relative;
+    margin:auto;
+}
+
+#count
+{
+   position:relative ;
+   color: var(--MyBlack); 
+   font-size:18px;
+   font-weight:bolder;
+}
+
+#see
+{
+    display:inline-block;
+    color:var(--MyGray4);
+    margin:auto; 
+    float: right;
+    margin-right:40px;
+    margin-top:10px;
+    cursor:pointer; 
+    transition-duration:0.2s;
+}
+
+i
+{
+    font-size:23px;
+    transition-duration:600ms;    
+}
+
+#check0,#check1,#check2,#check3,#check4
+{
+   font-size:93%;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 0px;
+   margin: 0px;
+   text-align: center;
+}
+
+#check0{
+    margin-left: 55px;
+}
+
+#check-password{
+    border: 1px solid var(--MyBlack);
+    width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.far.fa-check-circle{
+    padding: 0px;
+    margin: 0px;
+}
+/*check password - close*/
+
+
+#latitude , #longtitide{
+    display: none;
+}
+
+footer{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--MyGray1);
+    border: 1px solid var(--MyGray1);
+    width: 79px;
+    border-radius: 8px;
+    margin: 0%;
+}
+
+#founded-footer{
+    margin-top: 7%;
+}
+
+select{
+    border: 2px solid var(--MyBlack);
+    width: 93%;
+}
+
+#radius-input{
+    border: 2px solid var(--MyBlack);
+    width: 85%;
+}
+
+@media screen and (max-width:890px) {
+    .container1{
+        display: grid;
+        grid-template-areas: 
+        'heart_item'
+        'doctorFinder'
+        'signup-container';
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .doctorFinder{
+        margin: auto;
+    }
+
+    .plus_item{
+        display: none;
+    }
+
+    .medical1{
+        display: none;
+    }
+
+    .medical2{
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .search-container{
+        display: grid;
+        grid-template-areas: 
+        'search'
+        'search-item';
+        text-align: center;
+    }
+
+    .search-item{
+        display: none;
+    }
+
+    .search{
+        text-align: center;
+        padding-right: 0px;
+    }
+
+    #found-header{
+        font-size: 150%;
+    }
+
+    #doctor1{
+        font-size: 80%;
+    } 
+
+    #doctor2{
+        font-size: 80%;
+    }
+}
+
+.errorMessage{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--MyRed);
+    text-align: center;
+}
+
+#signInEmailInSearch{
+    display: none;
+}
+
+#form-table-home{
+    margin-top: -50px;
+}
+
+#form-table-signUp{
+    margin-top: -80px;
+}
+
+.not-found{
+    display: grid;
+    grid-template-areas: 'not-found-image not-found-text';
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--MyGray1);
+    text-align: center;
+}
+
+#not-found-img{
+    grid-area: not-found-image;
+    text-align: right;
+}
+
+#not-found-text{
+    grid-area: not-found-text;
+    text-align: left;
+}
+
+.founded-doctors{
+    display: flex;
+    justify-content: center;
+    min-width: fit-content;
+}
+
+.founded{
+    margin: 30px;
+    width:max-content;
+    min-width: 300px;
+}
+
+#founded-table{
+    text-align: left;
+}

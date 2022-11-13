@@ -1,0 +1,57 @@
+doctype html
+html 
+    head
+        script(src='../static/JavaScript.js' defer='')
+        title Doctor Finder - Home Page
+        link(rel="stylesheet" href='../static/style.css')
+    body 
+        header
+            nav#nav-Home.nav
+                ul.nav-list
+                    li.list-item(style='display:inline;')
+                        a.nav-background(href='/SignUp') Sign Up
+                    li.list-item(style='display:inline;')
+                        a.nav-background(href='/AboutUs') About Us
+                    li.list-item(style='display:inline;')
+                        a.nav-background(href='/HomePage') Home
+        .container1
+            .plus_item
+                img(src='../static/plus item.png' alt='' width='150' height='150')
+            .doctorFinder
+                h1#title-doctorFinder DOCTOR FINDER
+                hr#line-home-page
+                p#subtitle-doctorFinder
+                    | FIND THE BEST MEDICAL 
+                    br 
+                    | SERVICE FOR YOU
+            .heart_item
+                img(src='../static/heart item.png' width='150' height='150' alt='')
+            .medical1
+                img(src='../static/1.png' width='200' height='250' alt='')
+            .signup-container
+                form.form-sign-in-up(action='/findCustomer' method='get')
+                    table#form-table-home
+                        .SignIn
+                            tr
+                                td
+                                    lable(for='') Email:
+                                td
+                                    input#UserName(type='email' name='email' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="user@wabsite.com/co.il" value='')
+                                br
+                            tr
+                                td
+                                    lable(for='') Password:
+                                td
+                                    input#Password(type='password' name='password' required='' value='' minlength='8')
+                                br
+                            tr
+                                td
+                                td.button
+                                    input.submit(type='submit' name='submit' value='Sign In')
+                    .errorMessage #{userNotExist}
+                    .SignUp
+                        lable(for='') Don't have an account yet?
+                        a(href='/SignUp' target='_self')  Sign Up
+            .medical2
+                img(src='../static/2.png' width='200' height='250' alt='')
+        footer Tal Cohen

@@ -1,0 +1,22 @@
+doctype html
+html 
+    head
+        script(src='../static/JavaScript.js' defer='')
+        title Doctor Finder - About Us
+        link(rel='stylesheet' href='../static/style.css')
+    body 
+        #about-container
+            br
+            header
+                nav#nav-Home.nav
+                    ul.nav-list
+                        li.list-item(style='display:inline;')
+                            a.nav-background(href='/AboutUs') About Us
+                        li.list-item(style='display:inline;')
+                            a.nav-background(href='/HomePage') Home
+                h1.Header-about About Us
+            hr#about-line
+            br
+            each val in var1 
+                p.Text-about= val.text
+        footer#founded-footer Tal Cohen

@@ -1,0 +1,68 @@
+doctype html
+html
+    head
+        script(src='../static/JavaScript.js' defer='')
+        title Doctor Finder - Sign Up
+        link(rel='stylesheet' href='../static/style.css')
+    body 
+        .signup-container
+            header
+                nav#nav-Home.nav
+                    ul.nav-list
+                        li.list-item(style='display:inline;')
+                            a.nav-background(href='/SignUp') Sign Up
+                        li.list-item(style='display:inline;')
+                            a.nav-background(href='/AboutUs') About Us
+                        li.list-item(style='display:inline;')
+                            a.nav-background(href='/HomePage') Home
+                h1#sign_up Sign Up
+                br
+            hr.line-signup-page
+            form.form-sign-in-up(action='/newCustomer' method='POST')
+                table#form-table-signUp
+                    tr
+                        td
+                            lable.sign_up_titles(for='') Email:
+                        br
+                        td
+                            input#email(type='email' name='email' required='' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' placeholder='user@wabsite.com/co.il')
+                        br
+                    tr
+                        td
+                            lable.sign_up_titles(for='') Password:
+                        br
+                        td
+                            input#password(type='password' name='password' required='' value='' minlength='8' oninput='check()')
+                        br
+                    tr
+                        td
+                            lable.sign_up_titles(for='') Check Password:
+                        br
+                        td
+                            input#check-Password(type='password' name='check-Password' required='' value='' minlength='8')
+                        br
+                    tr
+                        td
+                        td.button
+                            input.submit(type='submit' name='submit' value='Submit' onclick='compare_password_and_check_password();')
+            .errorMessage #{userExist}
+            #check-password
+                #set
+                    #count Length : 0
+                    i#see.far.fa-eye(onclick='see()')
+                #check0
+                    i.far.fa-check-circle
+                    span Length more than 8.
+                #check1
+                    i.far.fa-check-circle
+                    span Length less than 10.
+                #check2
+                    i.far.fa-check-circle
+                    span Contains numerical character.
+                #check3
+                    i.far.fa-check-circle
+                    span Contains special character.
+                #check4
+                    i.far.fa-check-circle
+                    span Shouldn&apos;t contain spaces.
+        footer Tal Cohen
